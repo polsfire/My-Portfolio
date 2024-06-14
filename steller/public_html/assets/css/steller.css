@@ -11077,6 +11077,23 @@ pre {
   display: block;
 }
 
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.1);
+}
+
 .img-wrapper .overlay {
   background: rgba(255, 122, 87, 0.7);
   position: absolute;
@@ -11090,6 +11107,11 @@ pre {
   transition: all 0.4s ease;
 }
 
+.img-wrapper:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
 .img-wrapper .overlay .overlay-infos {
   position: absolute;
   top: 50%;
@@ -11099,25 +11121,25 @@ pre {
   color: #fff;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  width: calc(100% - 40px); /* Ensure full width with padding considered */
-  text-align: center; /* Center text */
-  border-radius: 10px; /* Slightly round corners for better aesthetics */
+  width: calc(100% - 40px);
+  text-align: center;
+  border-radius: 10px;
 }
 
 .img-wrapper .overlay .overlay-infos h5 {
   margin-bottom: 10px;
-  font-size: 20px; /* Slightly larger font size */
+  font-size: 20px;
 }
 
 .img-wrapper .overlay .overlay-infos p {
-  margin-bottom: 3px; /* Consistent margin */
-  font-size: 12px; /* Better readability */
+  margin-bottom: 3px;
+  font-size: 12px;
 }
 
 .img-wrapper .overlay .overlay-infos a {
   display: inline-block;
   margin-top: 4px;
-  padding: 10px 20px; /* Increased padding for better touch targets */
+  padding: 10px 20px;
   border-radius: 5px;
   background-color: #fff;
   color: #ff7a57;
@@ -11130,31 +11152,18 @@ pre {
   color: #fff;
 }
 
-.img-wrapper:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-  bottom: 12%;
-}
-
-.img-wrapper:hover .overlay .overlay-infos {
-  top: 50%;
-  left: 50%;
-  
-  transform: translate(-50%, -50%); /* Center vertically and horizontally */
-}
-
 @media (max-width: 768px) {
   .img-wrapper .overlay .overlay-infos {
     padding: 15px;
-    font-size: 14px; /* Adjust for smaller screens */
+    font-size: 14px;
   }
 
   .img-wrapper .overlay .overlay-infos h5 {
-    font-size: 18px; /* Adjust for smaller screens */
+    font-size: 18px;
   }
 
   .img-wrapper .overlay .overlay-infos p {
-    font-size: 14px; /* Adjust for smaller screens */
+    font-size: 14px;
   }
 }
 
